@@ -13,8 +13,7 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        //StartCoroutine(BulLife());
-        StartCoroutine("BulLife");
+        StartCoroutine(BulLife());
     }
 
     // Update is called once per frame
@@ -33,11 +32,11 @@ public class PlayerBullet : MonoBehaviour
                                                 transform.position+lDirection,
                                                 speed * Time.deltaTime);
     }
-    IEnumerable BulLife(){
-        print("StartCoroutine BulLife");
-        yield return new WaitForSeconds(4.0f);
+    IEnumerator BulLife(){
+        //print("StartCoroutine BulLife");
+        yield return new WaitForSeconds(3.0f);
         Destroy(this.gameObject);
-        //StopCoroutine("BulLife");
+        StopCoroutine("BulLife");
     }
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.name == "Enemy"){}
