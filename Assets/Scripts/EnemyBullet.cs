@@ -32,7 +32,7 @@ public class EnemyBullet : MonoBehaviour
                 act=true;
             }
             transform.position = Vector3.MoveTowards(transform.position, 
-                                                transform.position+lDirection,
+                                                transform.position-lDirection,
                                                 speed * Time.deltaTime);
     }
     IEnumerator BulLife(){

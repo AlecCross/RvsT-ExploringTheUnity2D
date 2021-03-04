@@ -10,6 +10,7 @@ public class Terminator : MonoBehaviour
     bool isAction = false;
     public GameObject bullet;
     public GameObject bulSpawn;
+    public float enemyLocalScale;
     GameObject player;
     [SerializeField]
     int lives = 10;

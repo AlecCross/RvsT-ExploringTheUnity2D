@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
     int lives;
     [SerializeField]
     float jumpForce;
-    Rigidbody2D playerRigidbody;
+    public Rigidbody2D _playerRigidbody;
     Animation animator;
     SpriteRenderer sprite;
     [SerializeField]
@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
         speed = 3.0f;
         lives = 15;
         
-        playerRigidbody = GetComponent<Rigidbody2D>();
+        _playerRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animation>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
@@ -38,7 +38,11 @@ public class Character : MonoBehaviour
         if (Input.GetButtonDown("Jump")) Jump();// && isGrounded
         if (Input.GetButtonDown("Fire1")) Shoot();
 
-        // if (pl.transform.localScale.x == 1)
+        if(lives<=0){
+            Destroy(this.gameObject);
+        }
+#region Name
+    // if (pl.transform.localScale.x == 1)
         //     direction = new Vector3(1f, 0f, 0f);
         // else direction = new Vector3(-1f, 0f, 0f);
         // transform.Rotate(new Vector3(0, 0, 45) * Time.deltaTime * -25); if (act == false)
@@ -50,7 +54,7 @@ public class Character : MonoBehaviour
                             // transform.position, 
                             // transform.position + lDirection, 
                             // speed * Time.deltaTime);
-
+#endregion
     }
     void Run()
     {
@@ -69,10 +73,14 @@ public class Character : MonoBehaviour
                                                     playerLocalScale);
         //sprite.flipX = direction.x < 0.0f;
     }
-    public void Jump()
+    void Jump()
     {
-        playerRigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        _playerRigidbody.AddForce(Vector3.up * 350f * 0.02f, ForceMode2D.Impulse);
     }
+    // public void Jump()
+    // {
+    //     _playerRigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+    // }
     void CheckGround()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);

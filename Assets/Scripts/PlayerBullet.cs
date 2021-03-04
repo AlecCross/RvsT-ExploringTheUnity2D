@@ -31,7 +31,8 @@ public class PlayerBullet : MonoBehaviour
             }
             transform.position = Vector3.MoveTowards(transform.position, 
                                                 transform.position+lDirection,
-                                                speed * Time.deltaTime);
+                                                speed * Time.deltaTime);                
+
     }
     IEnumerator BulLife(){
         //print("StartCoroutine BulLife");
