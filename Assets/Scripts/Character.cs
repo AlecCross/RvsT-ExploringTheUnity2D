@@ -23,7 +23,7 @@ public class Character : MonoBehaviour
     {
         jumpForce = 15.0f;
         speed = 3.0f;
-        lives = 5;
+        lives = 15;
         
         playerRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animation>();
@@ -100,5 +100,10 @@ public class Character : MonoBehaviour
         yield return new WaitForSeconds(4.0f); 
         Destroy(this.gameObject);
         StopCoroutine("BulLife");
+    }
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "EnemyBullet"){
+            lives--;
+        }
     }
 }
