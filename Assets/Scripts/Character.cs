@@ -12,30 +12,27 @@ public class Character : MonoBehaviour
     int lives;
     [SerializeField]
     float jumpForce;
-    public Rigidbody2D _playerRigidbody;
     Animation animator;
     SpriteRenderer sprite;
     [SerializeField]
     bool isGrounded;
     public GameObject bullet;
     public GameObject bulSpawn;
-    void Avake()
-    {
-        jumpForce = 15.0f;
+    public Rigidbody2D _rigidbody;
+    void Start(){
+        //_rigidbody = GetComponent<Rigidbody2D>();
+        jumpForce = 530.0f;
         speed = 3.0f;
         lives = 15;
-        
-        _playerRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animation>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
     void FixedUpdate(){
         CheckGround();
     }
-    void Update()
-    {
+    void Update(){
         if (Input.GetButton("Horizontal")) Run();
-        if (Input.GetButtonDown("Jump")) Jump();// && isGrounded
+        if (Input.GetButtonDown("Jump")&& isGrounded) Jump();// 
         if (Input.GetButtonDown("Fire1")) Shoot();
 
         if(lives<=0){
@@ -56,8 +53,11 @@ public class Character : MonoBehaviour
                             // speed * Time.deltaTime);
 #endregion
     }
-    void Run()
-    {
+    public void Jump(){
+        print("Jump()");
+        _rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+    }
+    void Run(){
         Vector3 direction = transform.right * Input.GetAxis("Horizontal");
         transform.position = Vector3.MoveTowards(
                                         transform.position, 
@@ -73,17 +73,9 @@ public class Character : MonoBehaviour
                                                     playerLocalScale);
         //sprite.flipX = direction.x < 0.0f;
     }
-    void Jump()
-    {
-        _playerRigidbody.AddForce(Vector3.up * 350f * 0.02f, ForceMode2D.Impulse);
-    }
-    // public void Jump()
-    // {
-    //     _playerRigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-    // }
     void CheckGround()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.4f);
         isGrounded = colliders.Length > 1;
     }
     void Shoot()
