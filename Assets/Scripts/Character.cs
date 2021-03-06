@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,8 +19,11 @@ public class Character : MonoBehaviour
     public GameObject bullet;
     public GameObject bulSpawn;
     public Rigidbody2D _rigidbody;
+    Vector3 plStartPosition;
     void Start(){
+
         //_rigidbody = GetComponent<Rigidbody2D>();
+        plStartPosition = this.transform.position;
         jumpForce = 530.0f;
         speed = 3.0f;
         lives = 15;
@@ -36,7 +39,9 @@ public class Character : MonoBehaviour
         if (Input.GetButtonDown("Fire1")) Shoot();
 
         if(lives<=0){
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            this.transform.position = plStartPosition;
+            lives = 15;
         }
 #region Name
     // if (pl.transform.localScale.x == 1)
@@ -95,12 +100,6 @@ public class Character : MonoBehaviour
     //     }
     //     Destroy(this.gameObject);
     // }
-    IEnumerator BulLife()
-    {
-        yield return new WaitForSeconds(4.0f); 
-        Destroy(this.gameObject);
-        StopCoroutine("BulLife");
-    }
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "EnemyBullet"){
             lives--;
