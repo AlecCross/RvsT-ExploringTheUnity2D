@@ -41,7 +41,7 @@ public class PlayerBullet : MonoBehaviour
         StopCoroutine("BulLife");
     }
     void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.name == "Enemy"){}
+        if(collision.gameObject.name == "StandShootEnemy"){}
         print("destroy");
         Destroy(this.gameObject);
     }

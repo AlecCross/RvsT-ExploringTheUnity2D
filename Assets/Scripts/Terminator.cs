@@ -14,15 +14,13 @@ public class Terminator : MonoBehaviour
     GameObject player;
     [SerializeField]
     int lives = 10;
-    void Start()
-    { 
+    void Start(){ 
         isAction = false;
         player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         dist=Vector3.Distance(player.transform.position, transform.position);
         if(dist<=23 && isAction==false){
             isAction=true;

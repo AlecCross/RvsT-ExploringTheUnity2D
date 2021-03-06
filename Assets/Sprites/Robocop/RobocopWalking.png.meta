@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: d867bde417f0c08418737e67573ffcd7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3758662392531080839
+    second: RobocopWalking_0
+  - first:
+      213: 4674034627859777216
+    second: RobocopWalking_1
+  - first:
+      213: 2530576471171310009
+    second: RobocopWalking_2
+  - first:
+      213: 8282257293509281343
+    second: RobocopWalking_3
+  - first:
+      213: 1927156631840477844
+    second: RobocopWalking_4
+  - first:
+      213: 7301976944629271807
+    second: RobocopWalking_5
+  - first:
+      213: 3039110366396205169
+    second: RobocopWalking_6
+  - first:
+      213: -3407036851486642331
+    second: RobocopWalking_7
+  - first:
+      213: -1102117467522135116
+    second: RobocopWalking_8
+  - first:
+      213: -7444260446090679616
+    second: RobocopWalking_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +139,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RobocopWalking_0
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7865f612883792430800000000000000
+      internalID: 3758662392531080839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_1
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6057ddab18dd040800000000000000
+      internalID: 4674034627859777216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1a02994e96e1320800000000000000
+      internalID: 2530576471171310009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36420e802d70f270800000000000000
+      internalID: 8282257293509281343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_4
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492d3630fb2aeba10800000000000000
+      internalID: 1927156631840477844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc48b6f755d55560800000000000000
+      internalID: 7301976944629271807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_6
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178c04eb6c61d2a20800000000000000
+      internalID: 3039110366396205169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_7
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f297ae806c7b0d0800000000000000
+      internalID: -3407036851486642331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_8
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb0797a00e74b0f0800000000000000
+      internalID: -1102117467522135116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobocopWalking_9
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 70
+        height: 80
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca264fc09ca0b890800000000000000
+      internalID: -7444260446090679616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

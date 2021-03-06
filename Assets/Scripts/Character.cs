@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
     int lives;
     [SerializeField]
     float jumpForce;
-    Animation animator;
+    Animator anim;
     SpriteRenderer sprite;
     [SerializeField]
     bool isGrounded;
@@ -27,36 +27,24 @@ public class Character : MonoBehaviour
         jumpForce = 530.0f;
         speed = 3.0f;
         lives = 15;
-        animator = GetComponent<Animation>();
+        anim = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
-    void FixedUpdate(){
-        CheckGround();
-    }
-    void Update(){
-        if (Input.GetButton("Horizontal")) Run();
-        if (Input.GetButtonDown("Jump")&& isGrounded) Jump();// 
-        if (Input.GetButtonDown("Fire1")) Shoot();
-
+    void Update(){        
         if(lives<=0){
             //Destroy(this.gameObject);
             this.transform.position = plStartPosition;
             lives = 15;
         }
-#region Name
-    // if (pl.transform.localScale.x == 1)
-        //     direction = new Vector3(1f, 0f, 0f);
-        // else direction = new Vector3(-1f, 0f, 0f);
-        // transform.Rotate(new Vector3(0, 0, 45) * Time.deltaTime * -25); if (act == false)
-        // {
-        //     lDirection = direction;
-        //     act = true;
-        // }
-        // transform.position = Vector3.MoveTowards(
-                            // transform.position, 
-                            // transform.position + lDirection, 
-                            // speed * Time.deltaTime);
-#endregion
+    }
+    void FixedUpdate(){
+        if (Input.GetButton("Horizontal")) Run();
+        //в компоненте анимаций изменяем значение параметра Speed на значение оси Х.
+        //приэтом нам нужен модуль значения
+        anim.SetFloat("Speed", Mathf.Abs(50));
+        if (Input.GetButtonDown("Jump")&& isGrounded) Jump();// 
+        if (Input.GetButtonDown("Fire1")) Shoot();
+          CheckGround();
     }
     public void Jump(){
         print("Jump()");
@@ -76,7 +64,6 @@ public class Character : MonoBehaviour
             this.transform.localScale = new Vector3(playerLocalScale, 
                                                     playerLocalScale, 
                                                     playerLocalScale);
-        //sprite.flipX = direction.x < 0.0f;
     }
     void CheckGround()
     {
@@ -87,6 +74,11 @@ public class Character : MonoBehaviour
     {
         Vector3 position = bulSpawn.transform.position;
         Instantiate(bullet, position, bullet.transform.rotation);
+    }
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "EnemyBullet"){
+            lives--;
+        }
     }
     // void OnCollisionEnter2D(Collision2D collision)
     // {
@@ -100,9 +92,4 @@ public class Character : MonoBehaviour
     //     }
     //     Destroy(this.gameObject);
     // }
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "EnemyBullet"){
-            lives--;
-        }
-    }
 }

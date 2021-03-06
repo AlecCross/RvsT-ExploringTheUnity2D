@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class EnemyBullet : MonoBehaviour
 {
     float speed = 8f;
@@ -11,17 +10,13 @@ public class EnemyBullet : MonoBehaviour
     bool act = false;
     public float enemyLocalScale1;
     public float enemyLocalScale;
-    void Start()
-    {
+    void Start(){
         gameObject.tag = "EnemyBullet";
-        enemy = GameObject.Find("Enemy");
+        enemy = GameObject.Find("StandShootEnemy");
         enemyLocalScale1 = enemy.transform.localScale.x;
         StartCoroutine(BulLife());
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         if (enemy != null)
         {
             if (enemyLocalScale1 == enemyLocalScale)
@@ -47,15 +42,12 @@ public class EnemyBullet : MonoBehaviour
                                                 speed * Time.deltaTime);
         }
     }
-    IEnumerator BulLife()
-    {
-        //print("StartCoroutine BulLife");
+    IEnumerator BulLife(){
         yield return new WaitForSeconds(3.0f);
         Destroy(this.gameObject);
         StopCoroutine("BulLife");
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
+    void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.name == "Player") { }
         print("destroy Enemy Bullet");
         Destroy(this.gameObject);
