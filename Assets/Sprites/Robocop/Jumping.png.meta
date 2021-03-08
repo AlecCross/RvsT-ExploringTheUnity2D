@@ -1,7 +1,22 @@
 fileFormatVersion: 2
-guid: 4bcb415a82929774c88039968487acf1
+guid: 0e503830b1bef1548aefeba042f269e4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4312366431063467818
+    second: Jumping_0
+  - first:
+      213: -4048530547193403679
+    second: Jumping_1
+  - first:
+      213: 2826979704478040783
+    second: Jumping_2
+  - first:
+      213: 5907000883226147584
+    second: Jumping_3
+  - first:
+      213: -6258145227301590787
+    second: Jumping_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,127 +114,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle2-Gun Turn_1
+      name: Jumping_0
       rect:
         serializedVersion: 2
-        x: 411
+        x: 25
         y: 6
-        width: 55
-        height: 72
+        width: 60
+        height: 66
       alignment: 9
-      pivot: {x: 0.2097845, y: 0.4924751}
+      pivot: {x: 0.23899072, y: 0.4486481}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605a6265d28d4a170800000000000000
-      internalID: 8188907711696905478
+      spriteID: 6d8942f24956724c0800000000000000
+      internalID: -4312366431063467818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_2
+      name: Jumping_1
       rect:
         serializedVersion: 2
-        x: 337
-        y: 6
-        width: 65
-        height: 72
+        x: 111
+        y: 5
+        width: 60
+        height: 71
       alignment: 9
-      pivot: {x: 0.17685735, y: 0.4914192}
+      pivot: {x: 0.22146021, y: 0.48847756}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1133a151b5d7e2930800000000000000
-      internalID: 4120368539240117009
+      spriteID: 1e62838daeab0d7c0800000000000000
+      internalID: -4048530547193403679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_3
+      name: Jumping_2
       rect:
         serializedVersion: 2
-        x: 258
-        y: 6
-        width: 65
-        height: 73
+        x: 191
+        y: 8
+        width: 60
+        height: 69
       alignment: 9
-      pivot: {x: 0.17716299, y: 0.48475364}
+      pivot: {x: 0.22535604, y: 0.47459355}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b8d96e821af70a40800000000000000
-      internalID: 5334507241249298609
+      spriteID: fc207a030137b3720800000000000000
+      internalID: 2826979704478040783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_4
+      name: Jumping_3
       rect:
         serializedVersion: 2
-        x: 188
-        y: 6
-        width: 54
-        height: 73
+        x: 262
+        y: 9
+        width: 60
+        height: 69
       alignment: 9
-      pivot: {x: 0.21447669, y: 0.48628062}
+      pivot: {x: 0.223408, y: 0.47289973}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5e84b0e02c3ed420800000000000000
-      internalID: 2656626942101720666
+      spriteID: 00bfc94b102e9f150800000000000000
+      internalID: 5907000883226147584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_5
+      name: Jumping_4
       rect:
         serializedVersion: 2
-        x: 113
+        x: 338
         y: 6
-        width: 58
-        height: 72
+        width: 60
+        height: 75
       alignment: 9
-      pivot: {x: 0.19814867, y: 0.49427944}
+      pivot: {x: 0.22730356, y: 0.5140244}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d59a9552dfafa33e0800000000000000
-      internalID: -2073068713290389155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle2-Gun Turn_6
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 6
-        width: 65
-        height: 72
-      alignment: 9
-      pivot: {x: 0.17789307, y: 0.4951652}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e48626d41a103e80800000000000000
-      internalID: -8201026244647156505
+      spriteID: df8e1e5a21a9629a0800000000000000
+      internalID: -6258145227301590787
       vertices: []
       indices: 
       edges: []

@@ -132,12 +132,12 @@ TextureImporter:
       name: Idle3-Holster Gun_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 724
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.27812678, y: 0.49331272}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Idle3-Holster Gun_1
       rect:
         serializedVersion: 2
-        x: 98
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 654
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.279803, y: 0.49439356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: Idle3-Holster Gun_2
       rect:
         serializedVersion: 2
-        x: 173
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 579
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.27893066, y: 0.4938268}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: Idle3-Holster Gun_3
       rect:
         serializedVersion: 2
-        x: 249
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 503
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.28072897, y: 0.49373218}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: Idle3-Holster Gun_4
       rect:
         serializedVersion: 2
-        x: 322
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 430
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.27839696, y: 0.49420506}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: Idle3-Holster Gun_5
       rect:
         serializedVersion: 2
-        x: 398
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 354
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.2801603, y: 0.49429184}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -258,12 +258,12 @@ TextureImporter:
       name: Idle3-Holster Gun_6
       rect:
         serializedVersion: 2
-        x: 480
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 272
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.2801633, y: 0.49194348}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: Idle3-Holster Gun_7
       rect:
         serializedVersion: 2
-        x: 556
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 196
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.28129652, y: 0.49312443}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,12 +300,12 @@ TextureImporter:
       name: Idle3-Holster Gun_8
       rect:
         serializedVersion: 2
-        x: 633
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 119
+        y: 8
+        width: 41
+        height: 72
+      alignment: 9
+      pivot: {x: 0.2809612, y: 0.49457306}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -321,12 +321,12 @@ TextureImporter:
       name: Idle3-Holster Gun_9
       rect:
         serializedVersion: 2
-        x: 714
-        y: 4
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 38
+        y: 8
+        width: 43
+        height: 72
+      alignment: 9
+      pivot: {x: 0.2669652, y: 0.49371794}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

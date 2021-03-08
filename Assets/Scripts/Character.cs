@@ -4,80 +4,122 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    Vector3 plStartPosition;
+    public Rigidbody2D _rigidbody;
     [SerializeField]
     float playerLocalScale;
     [SerializeField]
     float speed;
     [SerializeField]
-    int lives;
+    int maxHealth = 8;
+    int curentHealth;
     [SerializeField]
     float jumpForce;
-    Animator anim;
-    SpriteRenderer sprite;
     [SerializeField]
     bool isGrounded;
+    [SerializeField]
+    Transform groundCheck;
+    //Переменные для выстрела и пули
     public GameObject bullet;
     public GameObject bulSpawn;
-    public Rigidbody2D _rigidbody;
-    Vector3 plStartPosition;
-    void Start(){
+    //Animation setting
+    Animator anim;
+    //SpriteRenderer sprite;
+    CharState State
+    {
+        get { return (CharState)anim.GetInteger("State"); }
+        set { anim.SetInteger("State", (int)value); }
+    }
 
+    public HealthBar healthBar;
+    void Start()
+    {
         //_rigidbody = GetComponent<Rigidbody2D>();
         plStartPosition = this.transform.position;
         jumpForce = 530.0f;
         speed = 3.0f;
-        lives = 15;
+        curentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         anim = GetComponent<Animator>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
+        State = CharState.Stand;
+        //sprite = GetComponentInChildren<SpriteRenderer>();
     }
-    void Update(){        
-        if(lives<=0){
+    void Update()
+    {
+        if (curentHealth <= 0)
+        {
             //Destroy(this.gameObject);
             this.transform.position = plStartPosition;
-            lives = 15;
+            curentHealth = 15;
         }
     }
-    void FixedUpdate(){
-        if (Input.GetButton("Horizontal")) Run();
-        //в компоненте анимаций изменяем значение параметра Speed на значение оси Х.
-        //приэтом нам нужен модуль значения
-        anim.SetFloat("Speed", Mathf.Abs(50));
-        if (Input.GetButtonDown("Jump")&& isGrounded) Jump();// 
-        if (Input.GetButtonDown("Fire1")) Shoot();
-          CheckGround();
+    void FixedUpdate()
+    {
+        CheckGround();
+        if (Input.GetButton("Horizontal")){ Walk(); if(isGrounded==true) State=CharState.Walk;}
+        if (Input.GetButton("Jump") && isGrounded){ Jump();} 
+        if (Input.GetButtonDown("Fire1")) SingleShooting();
+        //if (Input.GetButton("Fire1")) StartCoroutine(ShootLimiter());
+
+        if(!Input.GetButton("Horizontal") &&
+            !Input.GetButtonDown("Jump")  &&
+             !Input.GetButtonDown("Fire1")&&
+             isGrounded)
+             {State = CharState.Idle;}
+        //Проверка состояния для анимаций
     }
-    public void Jump(){
-        print("Jump()");
+    public void Jump()
+    {
+        //print("Jump()");
+        
         _rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+        State = CharState.Jump;
     }
-    void Run(){
+    void Walk()
+    {
         Vector3 direction = transform.right * Input.GetAxis("Horizontal");
         transform.position = Vector3.MoveTowards(
-                                        transform.position, 
-                                        transform.position + direction, 
+                                        transform.position,
+                                        transform.position + direction,
                                         speed * Time.deltaTime);
         if (direction.x < 0f)
             this.transform.localScale = new Vector3(-playerLocalScale,
-                                                     playerLocalScale, 
-                                                     playerLocalScale);    
+                                                     playerLocalScale,
+                                                     playerLocalScale);
         else
-            this.transform.localScale = new Vector3(playerLocalScale, 
-                                                    playerLocalScale, 
+            this.transform.localScale = new Vector3(playerLocalScale,
+                                                    playerLocalScale,
                                                     playerLocalScale);
     }
     void CheckGround()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.4f);
-        isGrounded = colliders.Length > 1;
+        // Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
+        // isGrounded = colliders.Length > 1;
+        if(Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"))){
+            isGrounded = true;
+        }
+        else{
+            isGrounded = false;
+        }
     }
-    void Shoot()
+    void SingleShooting()
     {
         Vector3 position = bulSpawn.transform.position;
         Instantiate(bullet, position, bullet.transform.rotation);
     }
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.tag == "EnemyBullet"){
-            lives--;
+    // IEnumerator ShootLimiter(){
+    //     yield return StartCoroutine(Shooting());
+    // }
+    // IEnumerator Shooting(){
+    //     yield return new WaitForSeconds(.1f);
+    //     SingleShooting();
+    // }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            curentHealth--;
+            healthBar.SetHealth(curentHealth);
         }
     }
     // void OnCollisionEnter2D(Collision2D collision)
@@ -92,4 +134,14 @@ public class Character : MonoBehaviour
     //     }
     //     Destroy(this.gameObject);
     // }
+    public enum CharState
+    {
+        Stand,
+        Idle,
+        Walk,
+        Jump,
+        ShootintAuto9,
+        Die
+    }
 }
+

@@ -132,12 +132,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 702
+        y: 10
+        width: 58
+        height: 72
+      alignment: 9
+      pivot: {x: 0.19812644, y: 0.49347612}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_2
       rect:
         serializedVersion: 2
-        x: 187
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 625
+        y: 10
+        width: 67
+        height: 72
+      alignment: 9
+      pivot: {x: 0.20042214, y: 0.4936187}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_3
       rect:
         serializedVersion: 2
-        x: 267
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 546
+        y: 10
+        width: 66
+        height: 71
+      alignment: 9
+      pivot: {x: 0.18905824, y: 0.4999625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_4
       rect:
         serializedVersion: 2
-        x: 343
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 470
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.1891105, y: 0.49326065}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_5
       rect:
         serializedVersion: 2
-        x: 421
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 392
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.18953775, y: 0.49322388}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_6
       rect:
         serializedVersion: 2
-        x: 498
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 315
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.18963484, y: 0.4930492}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -258,12 +258,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_7
       rect:
         serializedVersion: 2
-        x: 572
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 241
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.18782552, y: 0.49373642}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_8
       rect:
         serializedVersion: 2
-        x: 651
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 162
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.19011202, y: 0.49236333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,12 +300,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_9
       rect:
         serializedVersion: 2
-        x: 727
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 86
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.18970628, y: 0.492461}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -321,12 +321,12 @@ TextureImporter:
       name: Idle1-Gun Turn End_10
       rect:
         serializedVersion: 2
-        x: 805
-        y: 6
-        width: 75
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 8
+        y: 10
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: 0.18901917, y: 0.494723}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

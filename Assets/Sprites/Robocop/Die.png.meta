@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 4bcb415a82929774c88039968487acf1
+guid: 2c43e675a60f28049889c22276536ff7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1815625823664879899
+    second: Die_0
+  - first:
+      213: 8754631090437682804
+    second: Die_1
+  - first:
+      213: 5542297916538816281
+    second: Die_2
+  - first:
+      213: -1778436320341457493
+    second: Die_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,127 +111,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle2-Gun Turn_1
+      name: Die_0
       rect:
         serializedVersion: 2
-        x: 411
-        y: 6
-        width: 55
-        height: 72
+        x: 22
+        y: 4
+        width: 56
+        height: 68
       alignment: 9
-      pivot: {x: 0.2097845, y: 0.4924751}
+      pivot: {x: 0.3492155, y: 0.47859046}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605a6265d28d4a170800000000000000
-      internalID: 8188907711696905478
+      spriteID: 5e6cd67dee99dc6e0800000000000000
+      internalID: -1815625823664879899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_2
+      name: Die_1
       rect:
         serializedVersion: 2
-        x: 337
-        y: 6
-        width: 65
-        height: 72
+        x: 97
+        y: 3
+        width: 63
+        height: 67
       alignment: 9
-      pivot: {x: 0.17685735, y: 0.4914192}
+      pivot: {x: 0.32123676, y: 0.46298474}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1133a151b5d7e2930800000000000000
-      internalID: 4120368539240117009
+      spriteID: 476f02db792be7970800000000000000
+      internalID: 8754631090437682804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_3
+      name: Die_2
       rect:
         serializedVersion: 2
-        x: 258
-        y: 6
-        width: 65
-        height: 73
+        x: 178
+        y: 4
+        width: 69
+        height: 65
       alignment: 9
-      pivot: {x: 0.17716299, y: 0.48475364}
+      pivot: {x: 0.2453401, y: 0.49999988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b8d96e821af70a40800000000000000
-      internalID: 5334507241249298609
+      spriteID: 9170faa37923aec40800000000000000
+      internalID: 5542297916538816281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2-Gun Turn_4
+      name: Die_3
       rect:
         serializedVersion: 2
-        x: 188
-        y: 6
-        width: 54
-        height: 73
+        x: 263
+        y: 4
+        width: 75
+        height: 62
       alignment: 9
-      pivot: {x: 0.21447669, y: 0.48628062}
+      pivot: {x: 0.2626705, y: 0.5103727}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5e84b0e02c3ed420800000000000000
-      internalID: 2656626942101720666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle2-Gun Turn_5
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 6
-        width: 58
-        height: 72
-      alignment: 9
-      pivot: {x: 0.19814867, y: 0.49427944}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d59a9552dfafa33e0800000000000000
-      internalID: -2073068713290389155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle2-Gun Turn_6
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 6
-        width: 65
-        height: 72
-      alignment: 9
-      pivot: {x: 0.17789307, y: 0.4951652}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e48626d41a103e80800000000000000
-      internalID: -8201026244647156505
+      spriteID: ba50566d699b157e0800000000000000
+      internalID: -1778436320341457493
       vertices: []
       indices: 
       edges: []
