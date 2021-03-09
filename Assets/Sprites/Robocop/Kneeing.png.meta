@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 2c43e675a60f28049889c22276536ff7
+guid: 46b4c49ac95244b47adc68035cb42eb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1815625823664879899
-    second: Die_0
+      213: 794750937866173796
+    second: Kneeing_0
   - first:
-      213: 8754631090437682804
-    second: Die_1
-  - first:
-      213: 5542297916538816281
-    second: Die_2
-  - first:
-      213: -1778436320341457493
-    second: Die_3
+      213: 7973867606750429822
+    second: Kneeing_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,85 +105,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Die_0
+      name: Kneeing_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 4
-        width: 56
-        height: 68
+        x: 7
+        y: 12
+        width: 54
+        height: 50
       alignment: 9
-      pivot: {x: 0.26278517, y: 0.54468304}
+      pivot: {x: 0.17078693, y: 0.7543727}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e6cd67dee99dc6e0800000000000000
-      internalID: -1815625823664879899
+      spriteID: 46dfb6864c5870b00800000000000000
+      internalID: 794750937866173796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_1
+      name: Kneeing_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 3
-        width: 63
-        height: 67
+        x: 81
+        y: 34
+        width: 78
+        height: 27
       alignment: 9
-      pivot: {x: 0.27733564, y: 0.6229446}
+      pivot: {x: 0.12916917, y: 0.033134744}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 476f02db792be7970800000000000000
-      internalID: 8754631090437682804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die_2
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 4
-        width: 69
-        height: 65
-      alignment: 9
-      pivot: {x: 0.2503503, y: 0.6116938}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9170faa37923aec40800000000000000
-      internalID: 5542297916538816281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die_3
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 4
-        width: 75
-        height: 62
-      alignment: 9
-      pivot: {x: 0.2350118, y: 0.6218948}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba50566d699b157e0800000000000000
-      internalID: -1778436320341457493
+      spriteID: e728a5a475ed8ae60800000000000000
+      internalID: 7973867606750429822
       vertices: []
       indices: 
       edges: []

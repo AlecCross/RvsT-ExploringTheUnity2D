@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
     float speed;
     [SerializeField]
     int maxHealth = 8;
+    bool isDie;
     int curentHealth;
     [SerializeField]
     float jumpForce;
@@ -42,28 +43,38 @@ public class Character : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
         anim = GetComponent<Animator>();
         State = CharState.Stand;
+        isDie = false;
         //sprite = GetComponentInChildren<SpriteRenderer>();
     }
     void Update()
     {
-        if (curentHealth <= 0)
-        {
-            //Destroy(this.gameObject);
-            this.transform.position = plStartPosition;
-            curentHealth = 15;
-        }
+        if (Input.GetButtonDown("Fire1")) SingleShooting();
+        if (curentHealth <= 0) StartCoroutine(Die());
+    }
+    IEnumerator Die(){
+        isDie = true;
+        curentHealth = 15;
+        State=CharState.Die;
+        yield return new WaitForSeconds(2f);
+        this.transform.position = plStartPosition;
+        isDie=false;
+        //Destroy(this.gameObject);
     }
     void FixedUpdate()
     {
         CheckGround();
         if (Input.GetButton("Horizontal")){ Walk(); if(isGrounded==true) State=CharState.Walk;}
+        if (Input.GetButton("Vertical")){ if(isGrounded==true) State=CharState.Kneeing;}
         if (Input.GetButton("Jump") && isGrounded){ Jump();} 
-        if (Input.GetButtonDown("Fire1")) SingleShooting();
+
         //if (Input.GetButton("Fire1")) StartCoroutine(ShootLimiter());
 
         if(!Input.GetButton("Horizontal") &&
             !Input.GetButtonDown("Jump")  &&
              !Input.GetButtonDown("Fire1")&&
+              !Input.GetButton("Vertical")&&
+               !Input.GetButton("Vertical")&&
+                !isDie&&
              isGrounded)
              {State = CharState.Idle;}
         //Проверка состояния для анимаций
@@ -141,7 +152,8 @@ public class Character : MonoBehaviour
         Walk,
         Jump,
         ShootintAuto9,
-        Die
+        Die,
+        Kneeing
     }
 }
 
