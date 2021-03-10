@@ -14,19 +14,25 @@ public class Terminator : MonoBehaviour
     GameObject player;
     [SerializeField]
     int lives = 10;
+    //public ScoreBar scoreBar;
+    public GameStats gameStats;
+    [SerializeField]
+    int scoreCount;
     void Start(){ 
         isAction = false;
         player = GameObject.Find("Player");
+        scoreCount = 100;
     }
 
     // Update is called once per frame
     void Update(){
         dist=Vector3.Distance(player.transform.position, transform.position);
-        if(dist<=23 && isAction==false){
+        if(dist<=10 && isAction==false){
             isAction=true;
             Shoot();
         }
         if(lives<=0){
+            gameStats.AddScore(scoreCount);
             Destroy(this.gameObject);
         }
     }

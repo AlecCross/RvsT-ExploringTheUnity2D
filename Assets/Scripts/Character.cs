@@ -7,6 +7,8 @@ public class Character : MonoBehaviour
     Vector3 plStartPosition;
     public Rigidbody2D _rigidbody;
     [SerializeField]
+    bool isKneeing;
+    [SerializeField]
     float playerLocalScale;
     [SerializeField]
     float speed;
@@ -31,8 +33,9 @@ public class Character : MonoBehaviour
         get { return (CharState)anim.GetInteger("State"); }
         set { anim.SetInteger("State", (int)value); }
     }
-
+    //Подключенные скрипты:
     public HealthBar healthBar;
+    //public ScoreBar scoreBar;
     void Start()
     {
         //_rigidbody = GetComponent<Rigidbody2D>();
@@ -44,45 +47,56 @@ public class Character : MonoBehaviour
         anim = GetComponent<Animator>();
         State = CharState.Stand;
         isDie = false;
+        isKneeing = false;
         //sprite = GetComponentInChildren<SpriteRenderer>();
-    }
-    void Update()
-    {
-        if (Input.GetButtonDown("Fire1")) SingleShooting();
-        if (curentHealth <= 0) StartCoroutine(Die());
-    }
-    IEnumerator Die(){
-        isDie = true;
-        curentHealth = 15;
-        State=CharState.Die;
-        yield return new WaitForSeconds(2f);
-        this.transform.position = plStartPosition;
-        isDie=false;
-        //Destroy(this.gameObject);
     }
     void FixedUpdate()
     {
         CheckGround();
-        if (Input.GetButton("Horizontal")){ Walk(); if(isGrounded==true) State=CharState.Walk;}
-        if (Input.GetButton("Vertical")){ if(isGrounded==true) State=CharState.Kneeing;}
-        if (Input.GetButton("Jump") && isGrounded){ Jump();} 
+        if (Input.GetButton("Horizontal") && !isDie)
+        {
+            Walk();
+            if (isGrounded == true)
+                State = CharState.Walk;
+        }
+
+        if (Input.GetButton("VerticalDown") && !isDie)
+        {
+            if (isGrounded == true)
+                State = CharState.Kneeing;
+            isKneeing = true;
+            GetComponent<BoxCollider2D>().enabled = !isKneeing;
+        }
+        else
+        {
+            isKneeing = false;
+            GetComponent<BoxCollider2D>().enabled = !isKneeing;
+        }
+        if (Input.GetButton("Jump") && isGrounded && !isDie)
+            Jump();
 
         //if (Input.GetButton("Fire1")) StartCoroutine(ShootLimiter());
 
-        if(!Input.GetButton("Horizontal") &&
-            !Input.GetButtonDown("Jump")  &&
-             !Input.GetButtonDown("Fire1")&&
-              !Input.GetButton("Vertical")&&
-               !Input.GetButton("Vertical")&&
-                !isDie&&
+        if (!Input.GetButton("Horizontal") &&
+            !Input.GetButtonDown("Jump") &&
+             !Input.GetButtonDown("Fire1") &&
+              !Input.GetButton("VerticalDown") &&
+                !isDie &&
              isGrounded)
-             {State = CharState.Idle;}
+        { State = CharState.Idle; }
         //Проверка состояния для анимаций
+    }
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1")) 
+            SingleShooting();
+        if (curentHealth == 0) 
+            StartCoroutine(Die());
     }
     public void Jump()
     {
         //print("Jump()");
-        
+
         _rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         State = CharState.Jump;
     }
@@ -106,11 +120,21 @@ public class Character : MonoBehaviour
     {
         // Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
         // isGrounded = colliders.Length > 1;
-        if(Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"))){
+        if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
+        {
             isGrounded = true;
         }
-        else{
+        else
+        {
             isGrounded = false;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            curentHealth--;
+            healthBar.SetHealth(curentHealth);
         }
     }
     void SingleShooting()
@@ -125,13 +149,18 @@ public class Character : MonoBehaviour
     //     yield return new WaitForSeconds(.1f);
     //     SingleShooting();
     // }
-    void OnCollisionEnter2D(Collision2D collision)
+    IEnumerator Die()
     {
-        if (collision.gameObject.tag == "EnemyBullet")
-        {
-            curentHealth--;
-            healthBar.SetHealth(curentHealth);
-        }
+        GetComponent<BoxCollider2D>().enabled = false;
+        isDie = true;
+        curentHealth = -1;
+        State = CharState.Die;
+        yield return new WaitForSeconds(2f);
+        this.transform.position = plStartPosition;
+        isDie = false;
+        curentHealth = maxHealth;
+        GetComponent<BoxCollider2D>().enabled = true;
+        //Destroy(this.gameObject);
     }
     // void OnCollisionEnter2D(Collision2D collision)
     // {

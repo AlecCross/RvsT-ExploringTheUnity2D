@@ -22,7 +22,7 @@ public class EnemyBullet : MonoBehaviour
             if (enemyLocalScale1 == enemyLocalScale)
             {
                 direction = new Vector3(1f, 0f, 0f);
-                print("EnemyLocation in Bullet" + direction.ToString());
+                //print("EnemyLocation in Bullet" + direction.ToString());
             }
             else
                 direction = new Vector3(-1f, 0f, 0f);
@@ -49,7 +49,7 @@ public class EnemyBullet : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.name == "Player") { }
-        print("destroy Enemy Bullet");
+        //print("destroy Enemy Bullet");
         Destroy(this.gameObject);
     }
 }
