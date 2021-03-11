@@ -26,6 +26,16 @@ public class WalkEnemy : MonoBehaviour
         }
     }
 
+    IEnumerator RunInterval(){
+        yield return new WaitForSeconds(2f);
+        this.transform.localScale = new Vector3(-1f,1f,1f);
+            direction = new Vector3(-1f,0f,0f);
+        yield return new WaitForSeconds(2f);
+        this.transform.localScale = new Vector3(1f,1f,1f);
+            direction = new Vector3(1f,0f,0f);
+
+    }
+
     public void Run(){
         transform.position = Vector3.MoveTowards(
                                         transform.position, 
