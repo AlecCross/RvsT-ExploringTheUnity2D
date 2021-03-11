@@ -25,6 +25,7 @@ public class Character : MonoBehaviour
     //Переменные для выстрела и пули
     public GameObject bullet;
     public GameObject bulSpawn;
+    Vector3 bulSpawnUp;
     //Animation setting
     Animator anim;
     //SpriteRenderer sprite;
@@ -48,6 +49,7 @@ public class Character : MonoBehaviour
         State = CharState.Stand;
         isDie = false;
         isKneeing = false;
+        bulSpawnUp = bulSpawn.transform.localPosition;
         //sprite = GetComponentInChildren<SpriteRenderer>();
     }
     void FixedUpdate()
@@ -65,11 +67,13 @@ public class Character : MonoBehaviour
             if (isGrounded == true)
                 State = CharState.Kneeing;
             isKneeing = true;
+            bulSpawn.transform.localPosition = new Vector3(0.46f, 0.009f, 0);
             GetComponent<BoxCollider2D>().enabled = !isKneeing;
         }
         else
         {
             isKneeing = false;
+            bulSpawn.transform.localPosition = bulSpawnUp; 
             GetComponent<BoxCollider2D>().enabled = !isKneeing;
         }
         if (Input.GetButton("Jump") && isGrounded && !isDie)
@@ -137,6 +141,14 @@ public class Character : MonoBehaviour
             healthBar.SetHealth(curentHealth);
         }
     }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "FlameTrap")
+        {
+            curentHealth--;
+            healthBar.SetHealth(curentHealth);
+        }
+    }
     void SingleShooting()
     {
         Vector3 position = bulSpawn.transform.position;
@@ -149,6 +161,9 @@ public class Character : MonoBehaviour
     //     yield return new WaitForSeconds(.1f);
     //     SingleShooting();
     // }
+    public void ReceivedDamage(int damage){
+        curentHealth-=damage;
+    }
     IEnumerator Die()
     {
         GetComponent<BoxCollider2D>().enabled = false;
@@ -159,6 +174,8 @@ public class Character : MonoBehaviour
         this.transform.position = plStartPosition;
         isDie = false;
         curentHealth = maxHealth;
+        healthBar.SetHealth(curentHealth);
+        print("curentHealth = maxHealth "+ curentHealth);
         GetComponent<BoxCollider2D>().enabled = true;
         //Destroy(this.gameObject);
     }

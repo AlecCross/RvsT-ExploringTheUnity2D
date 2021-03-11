@@ -1,0 +1,104 @@
+{
+    "name": "PlayerXboxController",
+    "maps": [
+        {
+            "name": "PlayerController",
+            "id": "1e97386a-1353-41a1-9c50-0f90b6709479",
+            "actions": [
+                {
+                    "name": "WalkRight",
+                    "type": "Button",
+                    "id": "442cd489-becb-4e39-b13d-b8281a7964db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "WalkLeft",
+                    "type": "Button",
+                    "id": "252bde27-e47c-4b78-b312-e8a877e54a5e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Kneeing",
+                    "type": "Button",
+                    "id": "42da3036-8e02-4ee6-8409-93f645e4e673",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "836d2867-af51-4d78-9e93-f5ad1162e244",
+                    "path": "<XInputController>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ba54b13-9c4c-4282-9318-f89b8f9b4f33",
+                    "path": "<XInputController>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86abfac0-1c8b-4c6f-aab2-437c12e02f41",
+                    "path": "<XInputController>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b8f3f75-157a-4f89-adfd-55371c06a7db",
+                    "path": "<XInputController>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6880ccc5-5236-4ece-91fb-a638d5ff76e5",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Kneeing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e768a29-dad8-4ac7-9fbf-3be1cc7b68fd",
+                    "path": "<XInputController>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Kneeing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
