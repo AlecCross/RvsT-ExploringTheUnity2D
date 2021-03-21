@@ -28,7 +28,6 @@ public class Character : MonoBehaviour
     Vector3 bulSpawnUp;
     //Animation setting
     Animator anim;
-    //SpriteRenderer sprite;
     CharState State
     {
         get { return (CharState)anim.GetInteger("State"); }
@@ -36,12 +35,11 @@ public class Character : MonoBehaviour
     }
     //Подключенные скрипты:
     public HealthBar healthBar;
-    //public ScoreBar scoreBar;
     void Start()
     {
-        //_rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
         plStartPosition = this.transform.position;
-        jumpForce = 530.0f;
+        jumpForce = 250.0f;//Раньше стояло 530. Но персонажа стало подбрасывать выше при том же весе
         speed = 3.0f;
         curentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -50,7 +48,6 @@ public class Character : MonoBehaviour
         isDie = false;
         isKneeing = false;
         bulSpawnUp = bulSpawn.transform.localPosition;
-        //sprite = GetComponentInChildren<SpriteRenderer>();
     }
     void FixedUpdate()
     {
@@ -58,13 +55,13 @@ public class Character : MonoBehaviour
         if (Input.GetButton("Horizontal") && !isDie)
         {
             Walk();
-            if (isGrounded == true)
+            if (isGrounded)
                 State = CharState.Walk;
         }
 
         if (Input.GetButton("VerticalDown") && !isDie)
         {
-            if (isGrounded == true)
+            if (isGrounded)
                 State = CharState.Kneeing;
             isKneeing = true;
             bulSpawn.transform.localPosition = new Vector3(0.46f, 0.009f, 0);
@@ -88,7 +85,6 @@ public class Character : MonoBehaviour
                 !isDie &&
              isGrounded)
         { State = CharState.Idle; }
-        //Проверка состояния для анимаций
     }
     void Update()
     {
@@ -99,8 +95,6 @@ public class Character : MonoBehaviour
     }
     public void Jump()
     {
-        //print("Jump()");
-
         _rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         State = CharState.Jump;
     }
@@ -122,16 +116,12 @@ public class Character : MonoBehaviour
     }
     void CheckGround()
     {
-        // Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
-        // isGrounded = colliders.Length > 1;
-        if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
+        //Чтобы проверять на "земле" ли игрок, нужно "земле" задать слой Ground
+        //При переносе проекта через "пакетную упаковку асетов" на другой ПК теряются часть тегов и слоёв
+        isGrounded = Physics2D.Linecast(
+                                    transform.position, 
+                                    groundCheck.position, 
+                                    1 << LayerMask.NameToLayer("Ground"));
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -144,8 +134,8 @@ public class Character : MonoBehaviour
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "FlameTrap")
-        {
-            curentHealth--;
+        {   
+            ReceivedDamage(1);
             healthBar.SetHealth(curentHealth);
         }
     }
@@ -154,6 +144,8 @@ public class Character : MonoBehaviour
         Vector3 position = bulSpawn.transform.position;
         Instantiate(bullet, position, bullet.transform.rotation);
     }
+    //Хотел реализовать автоматическую стрельбу зажатой кнопкой
+
     // IEnumerator ShootLimiter(){
     //     yield return StartCoroutine(Shooting());
     // }
@@ -177,7 +169,6 @@ public class Character : MonoBehaviour
         healthBar.SetHealth(curentHealth);
         print("curentHealth = maxHealth "+ curentHealth);
         GetComponent<BoxCollider2D>().enabled = true;
-        //Destroy(this.gameObject);
     }
     // void OnCollisionEnter2D(Collision2D collision)
     // {

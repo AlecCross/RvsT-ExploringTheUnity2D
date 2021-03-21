@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: afc64b355af4f0c4d9a9f4bddb881794
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5119679756009138563
+    second: Terminator Phase 4 Die_0
+  - first:
+      213: -4211346069909974447
+    second: Terminator Phase 4 Die_1
+  - first:
+      213: 770024259790625497
+    second: Terminator Phase 4 Die_2
+  - first:
+      213: 7600648426887529039
+    second: Terminator Phase 4 Die_3
+  - first:
+      213: 1542370218018266831
+    second: Terminator Phase 4 Die_4
+  - first:
+      213: 3537124466143775150
+    second: Terminator Phase 4 Die_5
+  - first:
+      213: 2018987980489641288
+    second: Terminator Phase 4 Die_6
+  - first:
+      213: 2966947710644397426
+    second: Terminator Phase 4 Die_7
+  - first:
+      213: -7023165183437308655
+    second: Terminator Phase 4 Die_8
+  - first:
+      213: 389000007566308200
+    second: Terminator Phase 4 Die_9
+  - first:
+      213: -2690405181979601117
+    second: Terminator Phase 4 Die_10
+  - first:
+      213: -2936333550099998088
+    second: Terminator Phase 4 Die_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -23,6 +59,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -40,7 +77,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,9 +91,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -71,9 +111,273 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 153
+        width: 112
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389eea4ec91cc0740800000000000000
+      internalID: 5119679756009138563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 152
+        width: 119
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15257c4ef0b4e85c0800000000000000
+      internalID: -4211346069909974447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_2
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 153
+        width: 115
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dad0490cfcafaa00800000000000000
+      internalID: 770024259790625497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_3
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 152
+        width: 120
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42434b697dea7960800000000000000
+      internalID: 7600648426887529039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_4
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 153
+        width: 121
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcede1d9a89976510800000000000000
+      internalID: 1542370218018266831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_5
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 152
+        width: 130
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9c7d226f3661130800000000000000
+      internalID: 3537124466143775150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4
+        width: 108
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d4ed60fd2e40c10800000000000000
+      internalID: 2018987980489641288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_7
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 5
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2752e182937bc2920800000000000000
+      internalID: 2966947710644397426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_8
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 5
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df35ad974b88e90800000000000000
+      internalID: -7023165183437308655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_9
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 11
+        width: 101
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8633d942271066500800000000000000
+      internalID: 389000007566308200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_10
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 11
+        width: 83
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3275c3acdb2c9aad0800000000000000
+      internalID: -2690405181979601117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 4 Die_11
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 13
+        width: 80
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a5a3c813c0047d0800000000000000
+      internalID: -2936333550099998088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

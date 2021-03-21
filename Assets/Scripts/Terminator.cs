@@ -18,6 +18,7 @@ public class Terminator : MonoBehaviour
     public GameStats gameStats;
     [SerializeField]
     int scoreCount;
+    public Animator animator;
     void Start(){ 
         isAction = false;
         player = GameObject.Find("Player");
@@ -32,6 +33,7 @@ public class Terminator : MonoBehaviour
             Shoot();
         }
         if(lives<=0){
+            StartCoroutine(ExplodesAnim());
             gameStats.AddScore(scoreCount);
             Destroy(this.gameObject);
         }
@@ -45,6 +47,12 @@ public class Terminator : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         isAction=false;
         StopCoroutine(Charge());
+    }
+    IEnumerator ExplodesAnim()
+    {
+        animator.SetTrigger("Explodes");
+        print("Запущена коротина взрыва");
+        yield return new WaitForSeconds(1f);
     }
     void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.tag == "PlayerBullet"){

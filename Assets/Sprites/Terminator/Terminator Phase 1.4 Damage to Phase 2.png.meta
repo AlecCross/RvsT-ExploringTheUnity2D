@@ -1,7 +1,61 @@
 fileFormatVersion: 2
 guid: ba601cf4792f6ec459aafb59e2f04d3b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2686343986948522909
+    second: Terminator Phase 1.4 Damage to Phase 2_0
+  - first:
+      213: 9219456244062965393
+    second: Terminator Phase 1.4 Damage to Phase 2_1
+  - first:
+      213: 4341670361258702675
+    second: Terminator Phase 1.4 Damage to Phase 2_2
+  - first:
+      213: 6842833574530878854
+    second: Terminator Phase 1.4 Damage to Phase 2_3
+  - first:
+      213: -139174949878292775
+    second: Terminator Phase 1.4 Damage to Phase 2_4
+  - first:
+      213: -8343143625995616200
+    second: Terminator Phase 1.4 Damage to Phase 2_5
+  - first:
+      213: -3146569671755163920
+    second: Terminator Phase 1.4 Damage to Phase 2_6
+  - first:
+      213: -54709765687670594
+    second: Terminator Phase 1.4 Damage to Phase 2_7
+  - first:
+      213: -8228094620229379366
+    second: Terminator Phase 1.4 Damage to Phase 2_8
+  - first:
+      213: 6022339819588635734
+    second: Terminator Phase 1.4 Damage to Phase 2_9
+  - first:
+      213: -827121140306089743
+    second: Terminator Phase 1.4 Damage to Phase 2_10
+  - first:
+      213: -7344955486314035794
+    second: Terminator Phase 1.4 Damage to Phase 2_11
+  - first:
+      213: -647583493787897097
+    second: Terminator Phase 1.4 Damage to Phase 2_12
+  - first:
+      213: 6612330920343383186
+    second: Terminator Phase 1.4 Damage to Phase 2_13
+  - first:
+      213: 7535772926804845051
+    second: Terminator Phase 1.4 Damage to Phase 2_14
+  - first:
+      213: -3674104173533185838
+    second: Terminator Phase 1.4 Damage to Phase 2_15
+  - first:
+      213: 2894794744827578087
+    second: Terminator Phase 1.4 Damage to Phase 2_16
+  - first:
+      213: -8397157828494685328
+    second: Terminator Phase 1.4 Damage to Phase 2_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -23,6 +77,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -40,7 +95,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,9 +109,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -71,9 +129,399 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c3d61706038bad0800000000000000
+      internalID: -2686343986948522909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e41a17b9612ff70800000000000000
+      internalID: 9219456244062965393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357baaeb036b04c30800000000000000
+      internalID: 4341670361258702675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d870391e0a6fe50800000000000000
+      internalID: 6842833574530878854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de1fd6de1d811ef0800000000000000
+      internalID: -139174949878292775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83087767313373c80800000000000000
+      internalID: -8343143625995616200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f614060e832554d0800000000000000
+      internalID: -3146569671755163920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_7
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8017a02c1ad3ff0800000000000000
+      internalID: -54709765687670594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adadce6898fefcd80800000000000000
+      internalID: -8228094620229379366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_9
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 91
+        width: 70
+        height: 90
+      alignment: 9
+      pivot: {x: 0.5433681, y: 0.49999982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c454f7826a39350800000000000000
+      internalID: 6022339819588635734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_10
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8e6d584b97584f0800000000000000
+      internalID: -827121140306089743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_11
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5023386e9711a90800000000000000
+      internalID: -7344955486314035794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_12
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 91
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2bd525e325307f0800000000000000
+      internalID: -647583493787897097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c266c30f7b3cb50800000000000000
+      internalID: 6612330920343383186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1653afc81749860800000000000000
+      internalID: 7535772926804845051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_15
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 0
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d836cc68b5f20dc0800000000000000
+      internalID: -3674104173533185838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_16
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 70
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e68d1fab706c2820800000000000000
+      internalID: 2894794744827578087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terminator Phase 1.4 Damage to Phase 2_17
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 75
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b0fade17d477b80800000000000000
+      internalID: -8397157828494685328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
